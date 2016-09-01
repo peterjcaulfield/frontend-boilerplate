@@ -51,7 +51,9 @@ exports.setupHtmlOutput = () => {
     return {
         plugins: [
             new HtmlWebpackPlugin({
-                title: 'Webpack demo'
+                title: 'Webpack demo',
+                template: require('html-webpack-template'),
+                inject: false
             })
         ],
     };
