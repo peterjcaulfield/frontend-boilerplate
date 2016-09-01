@@ -81,7 +81,7 @@ exports.setupDevServer = options => {
     };
 };
 
-exports.setupCSS = function(paths) {
+exports.setupCSS = paths => {
     return {
         module: {
             loaders: [
@@ -118,7 +118,7 @@ exports.setFreeVariable = (key, value) => {
     };
 };
 
-exports.extractBundle = (options) => {
+exports.extractBundle = options => {
     const entry = {};
     entry[options.name] = options.entries;
 
@@ -132,7 +132,7 @@ exports.extractBundle = (options) => {
     };
 };
 
-exports.extractCSS = function(paths) {
+exports.extractCSS = paths => {
     return {
         module: {
             loaders: [
@@ -149,7 +149,7 @@ exports.extractCSS = function(paths) {
     };
 };
 
-exports.clean = (path) => {
+exports.clean = path => {
     return {
         plugins: [
             new CleanWebpackPlugin([path], {
