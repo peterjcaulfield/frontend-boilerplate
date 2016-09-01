@@ -86,8 +86,8 @@ exports.setupCSS = paths => {
         module: {
             loaders: [
                 {
-                    test: /\.css$/,
-                    loaders: ['style', 'css'],
+                    test: /\.scss$/,
+                    loaders: ['style', 'css', 'sass'],
                     include: paths
                 }
             ]
@@ -137,8 +137,8 @@ exports.extractCSS = paths => {
         module: {
             loaders: [
                 {
-                    test: /\.css$/,
-                    loader: ExtractTextPlugin.extract('style', 'css'),
+                    test: /\.scss$/,
+                    loader: ExtractTextPlugin.extract('style', 'css', 'sass'),
                     include: paths
                 }
             ]

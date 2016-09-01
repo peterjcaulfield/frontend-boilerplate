@@ -8,7 +8,7 @@ const PATHS = {
     app: path.join(__dirname, 'app'),
     // path to styles
     style: [
-        path.join(__dirname, 'app', 'main.css'),
+        path.join(__dirname, 'app', 'style', 'main.scss'),
     ],
     // path to where webpack will output the build
     build: path.join(__dirname, 'build')
