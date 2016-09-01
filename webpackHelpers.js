@@ -23,13 +23,13 @@ exports.setupDevFileOutput = () => {
 exports.setupJavascript = path => {
     return {
         module: {
-            //preLoaders: [
-                //{
-                    //test: /\.jsx?$/,
-                    //loaders: ['eslint'],
-                    //include: path
-                //}
-            //],
+            preLoaders: [
+                {
+                    test: /\.jsx?$/,
+                    loaders: ['eslint-loader'],
+                    include: path
+                }
+            ],
             loaders: [
                 {
                     test: /\.jsx?$/,
